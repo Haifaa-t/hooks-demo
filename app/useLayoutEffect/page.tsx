@@ -15,7 +15,7 @@ export default function AyahDisplay() {
   return (
     <div className="p-4">
       <div ref={ayahRef} className="overflow-hidden max-h-24">
-        {/* محتوى الآية */}
+       
         <p>
           الله لا إله إلا هو الحي القيوم لا تأخذه سنة ولا نوم له ما في السماوات وما في الأرض...
         </p>
