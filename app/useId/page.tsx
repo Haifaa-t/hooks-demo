@@ -2,21 +2,40 @@
 
 import { useId } from 'react';
 
-export default function LoginForm() {
-  const usernameId = useId();
-  const passwordId = useId();
+export default function UseIdDemo() {
+  const nameInputId = useId(); 
+  const emailInputId = useId();
 
   return (
-    <form className="p-4">
-      <div className="mb-4">
-        <label htmlFor={usernameId} className="block mb-1">اسم المستخدم</label>
-        <input id={usernameId} type="text" className="w-full border px-2 py-1" />
-      </div>
-      <div className="mb-4">
-        <label htmlFor={passwordId} className="block mb-1">كلمة المرور</label>
-        <input id={passwordId} type="password" className="w-full border px-2 py-1" />
-      </div>
-      <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded">تسجيل الدخول</button>
-    </form>
+    <div className="min-h-screen flex flex-col items-center justify-center px-6 gap-6 text-center bg-slate-50">
+      <h1 className="text-2xl font-bold text-gray-800"> useId</h1>
+
+      <form className="space-y-4 text-left w-full max-w-md bg-white p-6 rounded shadow">
+        <div>
+          <label htmlFor={nameInputId} className="block text-gray-700 font-medium mb-1">
+            الاسم
+          </label>
+          <input
+            id={nameInputId}
+            type="text"
+            placeholder="ادخل اسمك"
+            className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          />
+        </div>
+
+        <div>
+          <label htmlFor={emailInputId} className="block text-gray-700 font-medium mb-1">
+            البريد الإلكتروني
+          </label>
+          <input
+            id={emailInputId}
+            type="email"
+            placeholder="ادخل بريدك"
+            className="w-full p-3 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          />
+        </div>
+      </form>
+    </div>
   );
 }
+
